@@ -104,12 +104,12 @@ body{
   transition: border 0.6s linear;
 }
 
-/* head */
-#head {
+/*.head */
+.head {
   color: var(--clr-w);
   gap: var(--gap, 2rem);
 }
-#head .heading {
+.head .heading {
   padding-bottom: 0.875rem;
 }
 
