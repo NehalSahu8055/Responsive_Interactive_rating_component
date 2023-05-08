@@ -19,9 +19,12 @@ for (let i = 0; i < rstar.length; i++) {
         rstar[j].setAttribute("disabled", true);
         rstar[j].style.backgroundColor = disabledColor;
         rstar[j].style.borderColor = disabledColor;
+        rstar[j].style.color = "var(--clr-mg)";
       } 
       else {
         rstar[j].style.backgroundColor = "var(--clr-o)";
+        rstar[j].style.border = "none";
+        rstar[j].style.color = "var(--clr-w)";
       }
     }
   });
