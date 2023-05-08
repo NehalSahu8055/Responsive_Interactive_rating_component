@@ -82,9 +82,7 @@ body::-webkit-scrollbar {
 }
 /* set up the body */
 body{
-  height: 100vh;
-  height: 100%;
-
+  min-height: 100vh;
   background: url(../images/bg-leaves.jpg);
   background-size: cover;
   background-attachment: fixed;
