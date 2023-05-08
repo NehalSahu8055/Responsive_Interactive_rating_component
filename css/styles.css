@@ -261,6 +261,13 @@ fieldset {
   justify-content: space-between;
 }
 
+/* grid */
+.grid{
+  display: grid;
+}
+.grid-c{
+  place-items: center;
+}
 /* block */
 .block {
   display: block;
