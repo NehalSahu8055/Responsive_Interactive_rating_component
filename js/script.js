@@ -2,18 +2,33 @@ const submit = document.querySelector(".btn"),
   thnku = document.querySelector(".thnk-u"),
   rate_card = document.querySelector(".rate-card"),
   rstar = document.querySelectorAll(".r-star"),
-  add = document.querySelector(".add");
+  add = document.querySelector(".add"),
+  disabledColor = "var(--clr-g)";
 
 var rate = 0;
 for (let i = 0; i < rstar.length; i++) {
   rstar[i].addEventListener("click", function () {
-    rstar[i].style.backgroundColor="var(--clr-o)";
-    rstar[i].style.color="var(--clr-w)";
-    
+    // enable the submit button
+    submit.removeAttribute("disabled");
+
+    // set the selected rating and update the message
     rate = rstar[i].textContent;
     add.textContent = "You selected " + rate + " out of 5";
+
+    // disable the other rating buttons
+    for (let j = 0; j < rstar.length; j++) {
+      if (j !== i) {
+        rstar[j].setAttribute("disabled", true);
+        rstar[j].style.backgroundColor = disabledColor;
+      } 
+      else {
+        rstar[j].style.backgroundColor = "var(--clr-o)";
+      }
+    }
   });
 }
+
+// disable the submit button and all rating buttons on page load
 
 submit.addEventListener("click", function () {
   if (rate == 0) alert("Please rate us");
