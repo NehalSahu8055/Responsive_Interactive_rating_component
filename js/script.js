@@ -8,8 +8,6 @@ const submit = document.querySelector(".btn"),
 var rate = 0;
 for (let i = 0; i < rstar.length; i++) {
   rstar[i].addEventListener("click", function () {
-    // enable the submit button
-    submit.removeAttribute("disabled");
 
     // set the selected rating and update the message
     rate = rstar[i].textContent;
