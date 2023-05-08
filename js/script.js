@@ -3,7 +3,7 @@ const submit = document.querySelector(".btn"),
   rate_card = document.querySelector(".rate-card"),
   rstar = document.querySelectorAll(".r-star"),
   add = document.querySelector(".add"),
-  disabledColor = "var(--clr-g)";
+  disabledColor = "var(--clr-trans)";
 
 var rate = 0;
 for (let i = 0; i < rstar.length; i++) {
@@ -18,6 +18,7 @@ for (let i = 0; i < rstar.length; i++) {
       if (j !== i) {
         rstar[j].setAttribute("disabled", true);
         rstar[j].style.backgroundColor = disabledColor;
+        rstar[j].style.borderColor = disabledColor;
       } 
       else {
         rstar[j].style.backgroundColor = "var(--clr-o)";
