@@ -199,8 +199,8 @@ fieldset {
 
 .rating-selected {
   color: var(--clr-o);
-  width: 12em;
-  height: 2em;
+  max-width: 12em;
+  min-height: 2rem;
   background-color: var(--clr-xdb);
   border-radius: 0 20px;
 }
